@@ -30,7 +30,11 @@ window.addEventListener("load", function() {
         } else {
             readyCheck.push(true);
         }
-}
+    }
+    if (readyCheck.includes(false)) {
+        alert(errorMessage); 
+        return; 
+    }
 
         formSubmission(document, faultyItems, pilotName.value, copilotName.value, Number(fuelLevel.value), Number(cargoMass.value));
     });
